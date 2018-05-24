@@ -6,6 +6,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.widget.ArrayAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,12 +15,10 @@ import java.util.List;
 
 public class UserAdapter extends ArrayAdapter {
 
-    List<User> users;
+    ArrayList<String> users;
 
+    public UserAdapter(@NonNull Context context, @LayoutRes int resource, @NonNull ArrayList<String> users) {
+        super(context, resource, users);
 
-    public UserAdapter(@NonNull Context context, @LayoutRes int resource, @IdRes int textViewResourceId, @NonNull List<User> users) {
-        super(context, resource, textViewResourceId, users);
-
-        this.users = users;
     }
 }

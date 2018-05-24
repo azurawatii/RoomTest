@@ -34,7 +34,7 @@ public class RetrieveUsers extends AppCompatActivity {
                     + users.get(i).getGender());
         }
 
-        adapter = new ArrayAdapter (RetrieveUsers.this, R.layout.support_simple_spinner_dropdown_item, result);
+        adapter = new UserAdapter (RetrieveUsers.this, R.layout.support_simple_spinner_dropdown_item, result);
 
         listView.setAdapter(adapter);
     }
